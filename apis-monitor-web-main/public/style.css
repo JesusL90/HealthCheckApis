@@ -1,0 +1,91 @@
+/* Body y layout principal */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+}
+
+/* Contenedor principal: ocupa todo el espacio disponible y centra tarjetas */
+#content-wrapper {
+  flex-grow: 1; /* ocupa todo el espacio disponible */
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Contenedor de tarjetas */
+.api-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* centra tarjetas horizontalmente */
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;       /* opcional: limita ancho */
+}
+
+/* Tarjeta individual */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px; /* tamaño fijo */
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  word-break: break-word;
+}
+
+/* Estado de API */
+.status {
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px 20px; /* más grande para UP/DOWN */
+  font-size: 1rem;
+}
+
+.status-success {
+  background-color: #4ade80;
+  color: #065f46;
+  font-size: 1.2rem;
+  padding: 12px 20px; /* tamaño uniforme */
+}
+
+.status-error {
+  background-color: #f87171;
+  color: #7f1d1d;
+}

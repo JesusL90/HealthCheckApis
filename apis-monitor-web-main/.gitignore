@@ -1,0 +1,13 @@
+# Archivos sensibles
+.env
+
+# Dependencias
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Builds
+dist/
+build/
