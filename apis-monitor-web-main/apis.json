@@ -1,0 +1,5 @@
+[
+    {"name": "GetValidationInfo", "url": "https:/GetValidationInfo"},
+    {"name": "GetValidationsDocument", "url" : "https:/GetValidationsDocument"},
+    {"name": "GetValidationsXmlData", "url" : "https:/GetValidationsXmlData"}
+]
