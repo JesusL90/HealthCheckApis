@@ -1,6 +1,12 @@
 import crypto from 'crypto';
+const algorithm = 'aes-256-cbc';
+const iv = Buffer.alloc(16, 0);
 
-const masterKeyBuffer = crypto.randomBytes(32); // 32 bytes = 256 bits
-const masterKeyHex = masterKeyBuffer.toString('hex');
+const masterKey ='MASTER_KEY';
+const apiKey = 'apiKey';
 
-console.log("MASTER_KEY=" + masterKeyHex);
+const cipher = crypto.createCipheriv(algorithm, Buffer.from(masterKey, 'hex'), iv);
+let encrypted = cipher.update(apiKey, 'utf8', 'base64');
+encrypted += cipher.final('base64');
+
+console.log('API_KEY_ENC=' + encrypted);
